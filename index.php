@@ -1,14 +1,35 @@
-<?php
-	class persona{
-		//atributos
-		public $nombre = "pedro";
 
-		//medodos
-		public function hablar ($mensaje){
-			echo $mensaje;
-		}
+<?php
+
+class Persona {
+	//atributos
+	public $nombre=array();
+	public $apellido=array();
+
+	//metodos
+	
+
+	public function guardar($nombre, $apellido) {
+		$this->nombre[] = $nombre;
+		$this->apellido[] = $apellido;
 	}
-	$persona = new Persona();
-	//echo $persona->nombre;
-	$persona->hablar("hola")
-	?>
+	
+	
+	public function formato($nombre, $apellido){
+		echo " nombre: ". $nombre ." apellido: ". $apellido. "<br>";
+
+	}
+	public function mostrar(){
+		for ($i=0; $i < count($this->nombre); $i++) { 
+			 $this->formato($this->nombre[$i], $this->apellido[$i]);
+	}
+}
+}	
+
+$Persona = new Persona();
+$Persona->guardar("carlos", "fernandes");
+$Persona->guardar("damian", "palumbo");
+$Persona->mostrar();
+
+?>
+	
