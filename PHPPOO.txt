@@ -1,0 +1,4 @@
+clases y objetos:
+una clase da a un objeto metodos y atributos
+metodo:crear, eliminar, editar, ver
+atributos:id, titulo, contenido, fecha
