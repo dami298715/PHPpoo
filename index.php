@@ -4,10 +4,11 @@
 		public $nombre = "pedro";
 
 		//medodos
-		public fuction hablar (){
-
+		public function hablar ($mensaje){
+			echo $mensaje;
 		}
 	}
-
-
+	$persona = new Persona();
+	//echo $persona->nombre;
+	$persona->hablar("hola")
 	?>
